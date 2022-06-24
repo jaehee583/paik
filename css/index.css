@@ -58,6 +58,8 @@
 .story p{
   display: none;
 }
+
+/* btn-hover */
 .btn-hover{
   width: 50px;
   height: 50px;
@@ -123,6 +125,7 @@
 .item-sec .container{
   position: absolute;
   left: 0;
+  right: 0;
   top: 0;
   bottom: 0;
 }
@@ -179,22 +182,22 @@
 }
 
 /* fran-sto */
-.fran-sto .inner{
+.fran-store .inner{
   display: flex;
   flex-flow: row nowrap;
 }
-.fran-sto h3{
+.fran-store h3{
   font-weight: 800;
   font-size: 1.3em;
   color:#071f60;
   margin-bottom:10px;
 }
-.fran-sto p{
-  margin-bottom: 100px;
+.fran-store p{
+  margin-bottom: 120px;
 }
 .fran,.store{
   flex: 1;
-  height: 240px;
+  height: 260px;
   border:2px solid #071f60;
   padding:10px;
 }
@@ -298,4 +301,120 @@
   color:#071f60;
   display:flex;
   justify-content:space-between;
+}
+
+/* 테블릿 스타일 */
+@media (min-width: 768px){
+  .item-sec{
+    max-height: 450px;
+  }
+  .item-sec h3{
+    font-size: 2em;
+  }
+  .fran-sto h3{
+    font-size: 2em;
+  }
+  .fran-sto p{
+    margin-bottom: 150px;
+  }
+  .fran,.store{
+    height: 300px;
+  }
+}
+
+@media (min-width: 1200px){
+  .item-sec .container{
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .item-sec .inner{
+    padding-top: 70px;
+  }
+  .item-sec h3{
+    font-size: 3em;
+  }
+  .item-sec p{
+    display: block;
+    font-weight: 600;
+  }
+  .btn-hover{
+    margin: 50px auto 50px 0;
+  }
+  .various-sweet article{
+    float: left;
+  }
+  .various-sweet .various{
+    width: calc(60% - 5px);
+    margin-right: 5px;
+  }
+  .various-sweet .sweet{
+    width: calc(40% - 5px);
+    margin-left: 5px;
+  }
+  .various .inner{
+    width: 700px;
+    margin: 0 0 0 auto;
+  }
+  .sweet .inner, .dessert .inner{
+    padding-left: 30px;
+  }
+  .dessert-store-fran{
+    display: flex;
+    flex-flow: row nowrap;
+  }
+  .dessert-store-fran .dessert{
+    flex: 52;
+    order: 2;
+  }
+  .dessert-store-fran .fran-store{
+    flex: 48;
+    order: 1;
+  }
+  .fran-store .inner{
+    flex-direction: column;
+    width: 500px;
+    margin: 0 0 0 auto;
+  }
+  .fran-store .inner>div{
+    flex: auto;
+    height: 320px;
+    padding: 30px;
+  }
+  .fran-store .inner .fran{
+    margin-right: 0;
+    order: 2;
+  }
+  .fran-store .inner .store{
+    margin-bottom: 10px;
+    order: 1;
+  }
+  .fran-store h3{
+    font-size: 2.5em;
+  }
+  .store .search{
+    width :80%;
+  }
+  .search input{
+    padding: 14px;
+    font-size: 0.9em;
+  }
+  .search i{
+    font-size: 1em;
+  }
+  .dessert{
+    margin-bottom: 0;
+  }
+  .dessert .img-box img{
+    width: auto;
+    height: 650px;
+  }
+  .dessert .inner{
+    justify-content: flex-start;
+  }
+  .dessert p{
+    color: #fff;
+  }
+  .dessert .btn-hover{
+    margin-top: 30px;
+  }
 }
