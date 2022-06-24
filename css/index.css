@@ -9,7 +9,7 @@
 }
 .bx-pager{
   position: absolute;
-  bottom: 40px;
+  bottom: 20px;
   z-index: 999;
   width: 100%;
   text-align: center;
