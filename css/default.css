@@ -80,6 +80,7 @@
 }
 .main-nav li{
   width: 100%;
+  border-bottom: 1px solid #ddd;
 }
 .main-nav li>a{
   font-size: 19px;
@@ -213,14 +214,50 @@ address li{
     position: static;
   }
   .main-nav>li{
+    position: relative;
     width: auto;
     margin-left: 80px;
     margin-bottom: none;
     padding: 0;
+    border-bottom: none;
   }
   .main-nav>li>a{
     padding: 0;
     font-size: 1em;
+  }
+  .main-nav>li::before{
+    content: '';
+    display: block;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 120px;
+    z-index: 10;
+    height:0;
+    background-color: #ffe600;
+    transition: 0.15s;
+  }
+  .main-nav>li.active::before{
+    height:200px;
+  }
+  .sub-nav{
+    position:absolute;
+    left: -60px;
+    right: -60px;
+    top:50px;
+    z-index:11;
+    margin:0;
+    padding:0;
+  }
+  .sub-nav li{
+    border-bottom: none;
+    padding: 10px 0;
+    text-align: center;
+  }
+  .sub-nav li a{
+    font-size: 0.9em;
+    padding: 0;
+    margin: 0;
   }
   .footer .f-site{
     display: block;
